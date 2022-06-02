@@ -116,7 +116,7 @@ Go to your ROS_workspace/src directory
 Clone the project or extact the compressed file in ROS_workspace/src directory 
 
 ```bash
-  $ git clone https://github.com/enriquea52/online_planning
+  $ git clone https://github.com/enriquea52/Hands-On-Intervention
 ```
 
 Go back to ROS_workspace directory
@@ -144,9 +144,6 @@ Where X can be either 1, 2 or 3
   $ roslaunch intervention simulation.launch
 ```
 
-
-
-
 ## Software Architecture
 
 <p align="center">
@@ -154,8 +151,6 @@ Where X can be either 1, 2 or 3
 </p>
 <figcaption align="center"><b>Figure 3. ROS software architecture</b></figcaption>
 </figure>
-
-
 
 ## Video demosntrations (Click on video):
 
