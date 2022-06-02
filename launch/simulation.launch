@@ -1,0 +1,28 @@
+<launch>
+
+    <!--node for launching the small house world simulation-->
+    <include file="$(find small_house_world)/launch/small_house.launch" />
+
+    <!--node for launching the turtlebot model simulation-->
+    <include file="$(find turtlebot_desktop)/launch/sim_start.launch" />
+
+    <!-- Loading parameters required for the pkg -->
+    <arg name="tbot_name" default="/turtlebot"/>
+    <rosparam file="$(find intervention)/config/parameters.yaml" command="load" subst_value="true"/>
+
+    <!-- Aruco Detect Package -->
+    <include file="$(find aruco_detect)/launch/aruco_detect.launch">
+    <arg name="tbot" value="$(arg tbot_name)" />
+    <arg name = "bot_camera" value = "realsense_d435i" />
+    </include>
+
+    <!-- Aruco Detector Node -->
+    <node pkg="intervention" type="aruco_detector.py" name="aruco_detector_node"/>
+
+    <!-- Task monitor Node whch cooridnates the actions of the robot -->
+    <node pkg="intervention" type="task_monitor.py" name="task_monitor_node"/>
+
+    <!-- Task priority control algorithm for mobile pick and place applications-->
+    <node pkg="intervention" type="mobile_control_v2.py" name="mobile_control_node" />
+
+</launch>

@@ -1,0 +1,22 @@
+
+tbot_manipulator_vel_cmd_topic: $(arg tbot_name)/manipulator/commands/velocity
+
+tbot_manipulator_pos_cmd_topic: $(arg tbot_name)/manipulator/commands/position
+
+tbot_base_vel_cmd_topic: $(arg tbot_name)/cmd_vel_mux/input/navi
+
+tbot_success_flag_topic: /success_control
+
+tbot_joint_states_topic: $(arg tbot_name)/joint_states
+
+tbot_odometry_topic: $(arg tbot_name)/odom
+
+aruco_goal_topic: /aruco_goto_position
+
+aruco_detect_pkg_topic: /fiducial_transforms
+
+std_goal_topic: /goto_position
+
+vacuum_on_service: $(arg tbot_name)/vacuum_gripper/on
+
+vacuum_off_service: $(arg tbot_name)/vacuum_gripper/off
