@@ -55,7 +55,7 @@ This project has been carried out by:
 
 ## Required Packages
 
-To make use of the present package, it is necessary to have the following packages and dependencies installed or install them by running the following commands.
+To make use of the present package, it is necessary to have the following packages and dependencies installed or install them by running the following commands in the working ROS workspace.
 
 For the real platform
 ```bash
@@ -106,6 +106,14 @@ sudo apt install ros-noetic-ros-controllers
 
 # Install xterm terminal emulator
 sudo apt-get install -y xterm 
+
+# ***** Project Specic Requirements: *****
+
+# fiducials Package incluiding the Aruco Detect package
+git clone https://github.com/UbiquityRobotics/fiducials.git
+
+# Vision messages to work with the Aruco Detect package
+git clone https://github.com/ros-perception/vision_msgs.git
 ```
 
 ## How to use it:
