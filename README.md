@@ -103,6 +103,9 @@ git clone https://bitbucket.org/udg_cirs/yujin_ocs.git
 # ROS controllers
 sudo apt install ros-noetic-ros-control                     
 sudo apt install ros-noetic-ros-controllers
+
+# Install xterm terminal emulator
+sudo apt-get install -y xterm 
 ```
 
 ## How to use it:
